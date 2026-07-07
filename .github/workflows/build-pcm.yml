@@ -1,0 +1,45 @@
+name: Build KiCad PCM package
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - src/Altium.json
+      - resources/icon.png
+      - scripts/build-pcm.py
+      - scripts/build-pcm.sh
+      - scripts/validate-pcm.py
+      - README.md
+      - .github/workflows/build-pcm.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-pcm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build KiCad 10 PCM v2 artifacts
+        run: |
+          SOURCE_DATE_EPOCH="$(git log -1 --format=%ct -- src/Altium.json resources/icon.png scripts/build-pcm.py scripts/build-pcm.sh scripts/validate-pcm.py README.md)" \
+            ./scripts/build-pcm.sh --branch main
+          ./scripts/validate-pcm.py
+
+      - name: Commit generated PCM files
+        run: |
+          if git diff --quiet -- repository.json packages.json repository-v1.json packages-v1.json dist; then
+            echo "No generated PCM changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add repository.json packages.json repository-v1.json packages-v1.json dist
+          git commit -m "Build KiCad PCM package artifacts"
+          git push

@@ -1,0 +1,46 @@
+{
+  "packages": [
+    {
+      "$schema": "https://go.kicad.org/pcm/schemas/v1",
+      "name": "Altium Inspired Theme",
+      "description": "Altium-inspired color theme for KiCad's PCB, schematic, GerbView, and 3D viewer editors.",
+      "description_full": "Altium Inspired Theme is an unofficial KiCad color theme intended to give KiCad a dark PCB editor palette reminiscent of Altium Designer while also providing schematic, GerbView, and 3D viewer colors. This project is not affiliated with, endorsed by, or sponsored by Altium Limited.",
+      "identifier": "com.github.adamjvr.kicad-altium",
+      "type": "colortheme",
+      "author": {
+        "name": "Adam Vadala-Roth",
+        "contact": {
+          "web": "https://github.com/adamjvr/kiCAD-Altium"
+        }
+      },
+      "maintainer": {
+        "name": "Adam Vadala-Roth",
+        "contact": {
+          "web": "https://github.com/adamjvr/kiCAD-Altium"
+        }
+      },
+      "license": "MIT",
+      "resources": {
+        "homepage": "https://github.com/adamjvr/kiCAD-Altium",
+        "repository": "https://github.com/adamjvr/kiCAD-Altium",
+        "issues": "https://github.com/adamjvr/kiCAD-Altium/issues"
+      },
+      "tags": [
+        "theme",
+        "colors",
+        "altium"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "status": "stable",
+          "kicad_version": "6.0",
+          "download_url": "https://raw.githubusercontent.com/adamjvr/kiCAD-Altium/main/dist/com.github.adamjvr.kicad-altium_v1.0.0_legacy_pcm.zip",
+          "download_sha256": "b26cf550c5537812e853c8195d685344ac00be473b4c5c6ece0923a8d1bc2155",
+          "download_size": 3173,
+          "install_size": 12258
+        }
+      ]
+    }
+  ]
+}

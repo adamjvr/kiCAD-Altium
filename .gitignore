@@ -1,0 +1,12 @@
+# Generated temporary build tree
+/build/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Editor/OS junk
+.DS_Store
+Thumbs.db
+
+# Keep dist/*.zip tracked: KiCad PCM downloads these archives from raw GitHub.

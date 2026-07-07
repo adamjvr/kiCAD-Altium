@@ -1,0 +1,16 @@
+{
+  "$schema": "https://go.kicad.org/pcm/schemas/v1#/definitions/Repository",
+  "name": "AdamJVR KiCad Addons",
+  "maintainer": {
+    "name": "Adam Vadala-Roth",
+    "contact": {
+      "web": "https://github.com/adamjvr"
+    }
+  },
+  "packages": {
+    "url": "https://raw.githubusercontent.com/adamjvr/kiCAD-Altium/main/packages-v1.json",
+    "sha256": "4d65373b9263184d4e0715786a0a316a97dbb5d66701c888af17f66a128f6d42",
+    "update_timestamp": 1783382400,
+    "update_time_utc": "2026-07-07 00:00:00"
+  }
+}
