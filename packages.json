@@ -36,9 +36,9 @@
           "status": "stable",
           "kicad_version": "10.0",
           "download_url": "https://raw.githubusercontent.com/adamjvr/kiCAD-Altium/main/dist/com.github.adamjvr.kicad-altium_v1.0.0_kicad10_pcm.zip",
-          "download_sha256": "512869481821bab634f6dab511da0005f706938cd5e456f27bce283b201a87cd",
-          "download_size": 3171,
-          "install_size": 12259
+          "download_sha256": "624c1ec95cb48c8696337e6165e089660237f80fe6a21ce434df93cd49acf287",
+          "download_size": 298863,
+          "install_size": 307861
         }
       ]
     }
