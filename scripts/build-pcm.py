@@ -313,7 +313,7 @@ def build(args: argparse.Namespace) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build KiCad PCM v2 artifacts for kiCAD-Altium.")
-    parser.add_argument("--version", default=os.environ.get("PCM_VERSION", "1.0.0"))
+    parser.add_argument("--version", default=os.environ.get("PCM_VERSION", "1.0.1"))
     parser.add_argument("--github-repository", default=None, help="owner/repo; defaults to GITHUB_REPOSITORY or adamjvr/kiCAD-Altium")
     parser.add_argument("--branch", default=None, help="branch name used for raw.githubusercontent.com URLs")
     parser.add_argument("--timestamp", type=int, default=None, help="repository update timestamp; defaults to source git timestamp")

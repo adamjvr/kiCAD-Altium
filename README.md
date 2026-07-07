@@ -67,8 +67,8 @@ packages-v1.json                                     Optional legacy KiCad 6-9 p
 scripts/build-pcm.py                                 Builds install archives and metadata
 scripts/build-pcm.sh                                 Shell wrapper for the build script
 scripts/validate-pcm.py                              Offline validation checks
-dist/com.github.adamjvr.kicad-altium_v1.0.0_kicad10_pcm.zip      KiCad 10+ install archive
-dist/com.github.adamjvr.kicad-altium_v1.0.0_legacy_pcm.zip       Legacy KiCad 6-9 install archive
+dist/com.github.adamjvr.kicad-altium_v1.0.1_kicad10_pcm.zip      KiCad 10+ install archive
+dist/com.github.adamjvr.kicad-altium_v1.0.1_legacy_pcm.zip       Legacy KiCad 6-9 install archive
 .github/workflows/build-pcm.yml                      GitHub Actions automation
 ```
 
@@ -90,6 +90,19 @@ The ZIP archives in `dist/` follow that layout exactly. The archive root contain
 The root-level `packages.json` points KiCad at the KiCad 10 package ZIP and includes the ZIP SHA256, download size, and install size. The root-level `repository.json` points KiCad at `packages.json` and includes `schema_version: 2`.
 
 The legacy `packages-v1.json` does the same thing for the legacy v1 ZIP.
+
+## Updating an already-installed package
+
+If the icon, theme file, or metadata changes after users have already installed the package, bump the package version before publishing. KiCad may keep showing cached package data when the repository still advertises the same package version.
+
+For an icon-only update, build the next patch version:
+
+```bash
+./scripts/build-pcm.sh --version 1.0.1
+./scripts/validate-pcm.py
+```
+
+Then have users refresh the repository in Plugin and Content Manager, apply the update, and restart KiCad if the old icon is still visible.
 
 ## Rebuild after editing the theme
 
@@ -116,7 +129,7 @@ https://raw.githubusercontent.com/adamjvr/kiCAD-Altium/main/repository.json
 
 ## Versioning
 
-The default package version is `1.0.0`. To build another version:
+The default package version is `1.0.1`. To build another version:
 
 ```bash
 ./scripts/build-pcm.sh --version 1.0.1

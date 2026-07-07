@@ -9,9 +9,9 @@
   },
   "packages": {
     "url": "https://raw.githubusercontent.com/adamjvr/kiCAD-Altium/main/packages.json",
-    "sha256": "10b0225ece094387da562d18bc944f51bebd4980f299719d95b870f7cbb610be",
-    "update_timestamp": 1783382400,
-    "update_time_utc": "2026-07-07 00:00:00"
+    "sha256": "ac970d4a9573f3d2a0e152206c5b219679d2894d81ed5ea777d2bdcae2cb5efd",
+    "update_timestamp": 1783413000,
+    "update_time_utc": "2026-07-07 08:30:00"
   },
   "schema_version": 2
 }
